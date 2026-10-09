@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | NutriPaws Enterprise</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <span>NutriPaws <span class="logo-badge">ENTERPRISE</span></span>
+      </a>
+      <div class="nav-actions">
+        <button class="icon-btn" data-theme-toggle title="Dark/Light Mode">🌙</button>
+        <a class="btn btn-primary" href="dashboard.html">Workspace Dashboard ➔</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="flex: 1; display: grid; place-items: center; padding: 60px 20px;">
+    <div class="card" style="max-width: 580px; text-align: center; padding: 48px 32px; border-color: var(--border-medium);">
+      <div style="font-size: 3.5rem; margin-bottom: 12px;">🐾</div>
+      <span class="badge badge-amber" style="margin-bottom: 14px;">404 • Resource Not Found</span>
+      <h1 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px;">Formulation Record or Page Missing</h1>
+      <p style="color: var(--text-secondary); margin-bottom: 28px; font-size: 0.94rem;">
+        The requested enterprise contract, lab assay batch, or URL could not be located in the active directory.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+        <a class="btn btn-primary" href="index.html">Return to Enterprise Home</a>
+        <a class="btn btn-secondary" href="dashboard.html">Open Hub Dashboard</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); padding: 24px 0;">
+    <div class="container text-center" style="text-align: center; font-size: 0.82rem; color: var(--text-muted);">
+      © 2026 NutriPaws Enterprise Solutions Inc. All rights reserved.
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>

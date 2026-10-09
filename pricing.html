@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise Pricing & Team Seats | NutriPaws Enterprise Hub</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <span>NutriPaws <span class="logo-badge">ENTERPRISE</span></span>
+      </a>
+
+      <button class="site-menu-toggle" type="button" data-site-menu-toggle>
+        ☰
+      </button>
+
+      <nav class="nav-links" id="site-menu">
+        <a href="index.html">Platform</a>
+        <a href="services.html">Solutions</a>
+        <a href="dashboard.html#matchmaking">Matchmaking</a>
+        <a class="active" href="pricing.html">Pricing</a>
+        <a href="about.html">Scientific Board</a>
+        <a href="contact.html">Enterprise RFP</a>
+        <div class="nav-actions">
+          <button class="icon-btn" data-theme-toggle title="Dark/Light Mode">🌙</button>
+          <a class="btn btn-outline" href="login.html">Enterprise SSO</a>
+          <a class="btn btn-primary" href="dashboard.html">Launch Hub ➔</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Pricing Hero -->
+  <section class="hero" style="padding: 70px 0 50px;">
+    <div class="container text-center" style="text-align: center; max-width: 800px; margin: 0 auto;">
+      <span class="badge badge-emerald" style="margin-bottom: 12px;">Enterprise Licensing & Team Seats</span>
+      <h1 class="hero-title" style="margin: 12px 0 16px;">
+        Predictable B2B Plans Built for Pet Nutrition Scale
+      </h1>
+      <p class="hero-description" style="margin: 0 auto 28px;">
+        Flexible team seat allocations, unlimited AAFCO/FEDIAF formulation batch simulations, client sponsorship matchmaking, and digital SLA execution.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Seat & Add-on Calculator -->
+  <section class="section" style="padding: 40px 0 60px;">
+    <div class="container">
+      <div class="card" style="max-width: 900px; margin: 0 auto 60px; padding: 36px; background: var(--bg-card); border-color: var(--border-medium);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 14px;">
+          <div>
+            <h3 style="font-size: 1.3rem;">🧮 Interactive Enterprise Seat & Quota Calculator</h3>
+            <p style="font-size: 0.86rem; color: var(--text-secondary);">Customize your science and procurement seats with instant volume discounts.</p>
+          </div>
+          <span class="badge badge-blue">Volume Discount Applied</span>
+        </div>
+
+        <div class="grid grid-2" style="gap: 32px; align-items: center;">
+          <div>
+            <div class="range-slider-group">
+              <div class="range-header">
+                <span>Enterprise Team Seats Needed</span>
+                <span id="calcSeatCount" class="font-mono" style="font-weight: 800; color: var(--brand-emerald); font-size: 1.2rem;">25 Seats</span>
+              </div>
+              <input type="range" id="seatSlider" class="range-input" min="5" max="100" value="25" step="5" />
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
+                <span>5 Seats (Min)</span>
+                <span>50 Seats</span>
+                <span>100+ Enterprise</span>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 24px;">
+              <label style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; cursor: pointer;">
+                <input type="checkbox" id="chkMatchmaking" checked style="accent-color: var(--brand-emerald); width: 18px; height: 18px;" />
+                <span>Unlimited Client Sponsorship Matchmaking Access (Included)</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; cursor: pointer;">
+                <input type="checkbox" id="chkBlockchain" checked style="accent-color: var(--brand-emerald); width: 18px; height: 18px;" />
+                <span>Cryptographic SHA-256 Digital Signature Vault ($450/mo add-on)</span>
+              </label>
+            </div>
+          </div>
+
+          <div style="background: var(--bg-subtle); border: 1px solid var(--border-subtle); padding: 24px; border-radius: var(--radius-md); text-align: center;">
+            <div style="font-size: 0.82rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 700;">Estimated Enterprise Subscription</div>
+            <div id="calcTotalPrice" class="font-mono" style="font-size: 2.5rem; font-weight: 800; color: var(--brand-emerald); margin: 10px 0;">$3,200<span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/month</span></div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 18px;">Billed annually • Includes 24/7 Veterinary Scientific Support</div>
+            <a class="btn btn-primary" style="width: 100%;" href="contact.html">Request Enterprise Contract Quote ➔</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tier Cards -->
+      <div class="grid grid-3">
+        <!-- Tier 1: Lab Innovator -->
+        <div class="card">
+          <div class="badge badge-blue" style="margin-bottom: 12px;">R&D & Formulation</div>
+          <h3>Lab Innovator</h3>
+          <p>For independent pet nutrition labs and emerging biotech ingredient suppliers.</p>
+          <div style="font-size: 2.2rem; font-weight: 800; margin: 20px 0 10px; font-family: 'JetBrains Mono', monospace;">
+            $1,250<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">/mo</span>
+          </div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 28px;">
+            <li>✓ Up to <strong>10 Team Seats</strong> included</li>
+            <li>✓ AAFCO & FEDIAF Batch Simulator</li>
+            <li>✓ 5 Active Formulation IP Licenses</li>
+            <li>✓ Standard Matchmaking Directory</li>
+            <li>✓ Email & Lab Ticket Support</li>
+          </ul>
+          <a class="btn btn-secondary" style="width: 100%;" href="dashboard.html">Start 14-Day Pilot</a>
+        </div>
+
+        <!-- Tier 2: Enterprise Scale (Recommended) -->
+        <div class="card" style="border-color: var(--brand-emerald); background: linear-gradient(180deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.05) 100%);">
+          <div class="badge badge-emerald" style="margin-bottom: 12px;">★ MOST POPULAR</div>
+          <h3>Enterprise Scale</h3>
+          <p>For established pet food manufacturers, multi-brand portfolios, and OEM extruders.</p>
+          <div style="font-size: 2.2rem; font-weight: 800; margin: 20px 0 10px; font-family: 'JetBrains Mono', monospace; color: var(--brand-emerald);">
+            $3,450<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">/mo</span>
+          </div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 28px;">
+            <li>✓ Up to <strong>30 Team Seats</strong> included</li>
+            <li>✓ Unlimited AAFCO / FEDIAF / NRC Engines</li>
+            <li>✓ Priority Matchmaking & Sponsor RFP Dispatch</li>
+            <li>✓ Digital Contract Vault & SHA-256 e-Signatures</li>
+            <li>✓ Full RBAC & Department Permission Control</li>
+            <li>✓ Dedicated Veterinary Account Director</li>
+          </ul>
+          <a class="btn btn-primary" style="width: 100%;" href="dashboard.html">Deploy Enterprise Plan</a>
+        </div>
+
+        <!-- Tier 3: Global Conglomerate -->
+        <div class="card">
+          <div class="badge badge-purple" style="margin-bottom: 12px;">Global Operations</div>
+          <h3>Global Conglomerate</h3>
+          <p>For multinational pet care corporations requiring custom co-packing integrations.</p>
+          <div style="font-size: 2.2rem; font-weight: 800; margin: 20px 0 10px; font-family: 'JetBrains Mono', monospace;">
+            Custom<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">/enterprise</span>
+          </div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 28px;">
+            <li>✓ <strong>Unlimited Team Seats</strong> & Custom SSO</li>
+            <li>✓ Dedicated Private Cloud Instance</li>
+            <li>✓ Custom ERP & MES Factory Extrusion Integration</li>
+            <li>✓ Bespoke Legal SLA & Regulatory Governance</li>
+            <li>✓ 99.99% SLA Uptime Guarantee</li>
+          </ul>
+          <a class="btn btn-secondary" style="width: 100%;" href="contact.html">Contact Corporate Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); padding: 48px 0 24px;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.85rem; color: var(--text-secondary);">
+      <div>© 2026 NutriPaws Enterprise Hub. All rights reserved.</div>
+      <div style="display: flex; gap: 20px;">
+        <a href="index.html">Home</a>
+        <a href="services.html">Solutions</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+  <script src="app.js"></script>
+  <script>
+    // Live Seat Price Calculator
+    const seatSlider = document.getElementById('seatSlider');
+    const seatCount = document.getElementById('calcSeatCount');
+    const totalPrice = document.getElementById('calcTotalPrice');
+    const chkBlockchain = document.getElementById('chkBlockchain');
+
+    function updatePricing() {
+      const seats = Number(seatSlider.value);
+      seatCount.textContent = `${seats} Seats`;
+      
+      let base = seats * 110;
+      if (seats >= 50) base = seats * 85; // Volume discount
+      if (chkBlockchain.checked) base += 450;
+
+      totalPrice.innerHTML = `$${base.toLocaleString()}<span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/month</span>`;
+    }
+
+    if (seatSlider) {
+      seatSlider.addEventListener('input', updatePricing);
+      chkBlockchain.addEventListener('change', updatePricing);
+      updatePricing();
+    }
+  </script>
+</body>
+
+</html>

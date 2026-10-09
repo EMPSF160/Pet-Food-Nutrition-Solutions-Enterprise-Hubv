@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proprietary Pet Nutrition Formulation Library | NutriPaws</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <span>NutriPaws <span class="logo-badge">ENTERPRISE</span></span>
+      </a>
+
+      <button class="site-menu-toggle" type="button" data-site-menu-toggle>
+        ☰
+      </button>
+
+      <nav class="nav-links" id="site-menu">
+        <a href="index.html">Platform</a>
+        <a href="services.html">Solutions</a>
+        <a href="dashboard.html#matchmaking">Matchmaking</a>
+        <a class="active" href="home-recipes.html">Formula Library</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">Scientific Board</a>
+        <a href="contact.html">Enterprise RFP</a>
+        <div class="nav-actions">
+          <button class="icon-btn" data-theme-toggle title="Dark/Light Mode">🌙</button>
+          <a class="btn btn-outline" href="login.html">Enterprise SSO</a>
+          <a class="btn btn-primary" href="dashboard.html">Launch Hub ➔</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" style="padding: 70px 0 50px;">
+    <div class="container text-center" style="text-align: center; max-width: 800px; margin: 0 auto;">
+      <span class="badge badge-emerald" style="margin-bottom: 12px;">AAFCO 2026 & FEDIAF Certified Formula Blueprints</span>
+      <h1 class="hero-title" style="margin: 12px 0 16px;">
+        Proprietary Pet Food Formulation Library
+      </h1>
+      <p class="hero-description" style="margin: 0 auto 28px;">
+        Ready-to-license, clinically validated pet food formulas for premium canine, feline, and specialty veterinary diet brands.
+      </p>
+    </div>
+  </section>
+
+  <!-- Formula Library Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3" style="gap: 28px;">
+        <!-- Formula 1 -->
+        <div class="card">
+          <div class="badge badge-emerald" style="margin-bottom: 10px;">Code #NP-CAN-HYPO8</div>
+          <h3>Hypoallergenic Insect & Algae EPA Kibble</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 8px 0 14px;">
+            Novel Black Soldier Fly protein with microalgae DHA for dogs with food sensitivities and dermatological inflammation.
+          </p>
+          <div class="match-tags" style="margin-bottom: 16px;">
+            <span class="tag">🐕 Canine Adult</span>
+            <span class="tag">🥩 30% Protein</span>
+            <span class="tag">⚖️ AAFCO 99.8%</span>
+          </div>
+          <a class="btn btn-primary btn-sm" style="width: 100%;" href="dashboard.html#formulation">Simulate Batch in Hub ➔</a>
+        </div>
+
+        <!-- Formula 2 -->
+        <div class="card">
+          <div class="badge badge-purple" style="margin-bottom: 10px;">Code #NP-FEL-RENAL4</div>
+          <h3>Feline Renal & Low-Phosphorus Pate</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 8px 0 14px;">
+            Hydrolyzed salmon peptide wet formula with strictly controlled phosphorus (< 0.5% DM) and enhanced potassium citrate.
+          </p>
+          <div class="match-tags" style="margin-bottom: 16px;">
+            <span class="tag">🐈 Feline Senior</span>
+            <span class="tag">🐟 10.5% Moisture-Adj Protein</span>
+            <span class="tag">🛡️ FEDIAF Verified</span>
+          </div>
+          <a class="btn btn-primary btn-sm" style="width: 100%;" href="dashboard.html#formulation">Simulate Batch in Hub ➔</a>
+        </div>
+
+        <!-- Formula 3 -->
+        <div class="card">
+          <div class="badge badge-blue" style="margin-bottom: 10px;">Code #NP-CAN-GUTSHIELD</div>
+          <h3>Postbiotic Gut-Shield Puppy Growth Kibble</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 8px 0 14px;">
+            Heat-stabilized postbiotic cell walls with organic kelp prebiotic fiber for optimal microbiome colonisation and puppy immunity.
+          </p>
+          <div class="match-tags" style="margin-bottom: 16px;">
+            <span class="tag">🐶 Canine Growth</span>
+            <span class="tag">🧬 34% Protein</span>
+            <span class="tag">⭐ High Palatability</span>
+          </div>
+          <a class="btn btn-primary btn-sm" style="width: 100%;" href="dashboard.html#formulation">Simulate Batch in Hub ➔</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); padding: 48px 0 24px;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.85rem; color: var(--text-secondary);">
+      <div>© 2026 NutriPaws Enterprise Hub. All rights reserved.</div>
+      <div style="display: flex; gap: 20px;">
+        <a href="index.html">Home</a>
+        <a href="services.html">Solutions</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>

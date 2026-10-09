@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise RFP & Consultation | NutriPaws Enterprise</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <span>NutriPaws <span class="logo-badge">ENTERPRISE</span></span>
+      </a>
+
+      <button class="site-menu-toggle" type="button" data-site-menu-toggle>
+        ☰
+      </button>
+
+      <nav class="nav-links" id="site-menu">
+        <a href="index.html">Platform</a>
+        <a href="services.html">Solutions</a>
+        <a href="dashboard.html#matchmaking">Matchmaking</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">Scientific Board</a>
+        <a class="active" href="contact.html">Enterprise RFP</a>
+        <div class="nav-actions">
+          <button class="icon-btn" data-theme-toggle title="Dark/Light Mode">🌙</button>
+          <a class="btn btn-outline" href="login.html">Enterprise SSO</a>
+          <a class="btn btn-primary" href="dashboard.html">Launch Hub ➔</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" style="padding: 70px 0 40px;">
+    <div class="container text-center" style="text-align: center; max-width: 800px; margin: 0 auto;">
+      <span class="badge badge-emerald" style="margin-bottom: 12px;">Enterprise Partner Inquiries</span>
+      <h1 class="hero-title" style="margin: 12px 0 16px;">
+        Submit an Enterprise RFP or Schedule a Consultation
+      </h1>
+      <p class="hero-description" style="margin: 0 auto 28px;">
+        Connect directly with our Chief Veterinary Nutritionists and B2B Sponsorship Directors for bespoke formulation and co-manufacturing terms.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="card" style="max-width: 800px; margin: 0 auto; padding: 36px; border-color: var(--border-medium);">
+        <form id="contactForm" onsubmit="event.preventDefault(); showToast('✅ Enterprise RFP received! An Account Director will review your formulation parameters within 4 hours.', 'success'); this.reset();">
+          <div class="grid grid-2" style="margin-bottom: 18px;">
+            <div class="form-group">
+              <label class="form-label">First & Last Name</label>
+              <input type="text" class="form-control" placeholder="Dr. Jennifer Ross" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Corporate Email Address</label>
+              <input type="email" class="form-control" placeholder="j.ross@petfoodbrand.com" required />
+            </div>
+          </div>
+
+          <div class="grid grid-2" style="margin-bottom: 18px;">
+            <div class="form-group">
+              <label class="form-label">Organization / Brand Name</label>
+              <input type="text" class="form-control" placeholder="Apex Pet Nutrition LLC" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Enterprise Category</label>
+              <select class="form-control">
+                <option>Pet Food Brand / Manufacturer</option>
+                <option>Raw Material & Biotech Supplier</option>
+                <option>OEM Extruder / Co-Packer</option>
+                <option>Veterinary Clinical Research Lab</option>
+                <option>Retail & Institutional Sponsor</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-2" style="margin-bottom: 18px;">
+            <div class="form-group">
+              <label class="form-label">Target Batch Volume (MT / Year)</label>
+              <select class="form-control">
+                <option>Pilot Run (< 50 Metric Tons)</option>
+                <option>Commercial Scale (50 - 500 Metric Tons)</option>
+                <option>Conglomerate Scale (500 - 5,000+ Metric Tons)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Required Compliance Standard</label>
+              <select class="form-control">
+                <option>AAFCO 2026 (USA)</option>
+                <option>FEDIAF (Europe)</option>
+                <option>Dual AAFCO + FEDIAF Global Passport</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 24px;">
+            <label class="form-label">Formulation & Matchmaking Project Scope</label>
+            <textarea class="form-control" rows="4" placeholder="Detail your protein requirements, target species (canine/feline), target launch quarter, and any required clinical feeding trials..." required></textarea>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <label style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; cursor: pointer;">
+              <input type="checkbox" checked style="accent-color: var(--brand-emerald); width: 18px; height: 18px;" />
+              <span>Request Mutual Two-Way NDA execution prior to formula data exchange.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            🚀 Submit Enterprise RFP & Initiate Scientific Matchmaking
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); padding: 48px 0 24px;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.85rem; color: var(--text-secondary);">
+      <div>© 2026 NutriPaws Enterprise Hub. All rights reserved.</div>
+      <div style="display: flex; gap: 20px;">
+        <a href="index.html">Home</a>
+        <a href="services.html">Solutions</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>

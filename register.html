@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise Account Registration | NutriPaws Enterprise</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <span>NutriPaws <span class="logo-badge">ENTERPRISE</span></span>
+      </a>
+      <div>
+        <button class="icon-btn" data-theme-toggle title="Dark/Light Mode">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main style="flex: 1; display: grid; place-items: center; padding: 40px 20px;">
+    <div class="card" style="width: min(540px, 100%); padding: 36px; border-color: var(--border-medium);">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <span class="badge badge-emerald" style="margin-bottom: 10px;">14-Day Enterprise Sandbox</span>
+        <h2 style="font-size: 1.6rem; font-weight: 800;">Register Enterprise Account</h2>
+        <p style="font-size: 0.86rem; color: var(--text-secondary); margin-top: 6px;">Provision your company workspace, unlock partner matchmaking, and invite up to 10 team members.</p>
+      </div>
+
+      <form onsubmit="event.preventDefault(); showToast('🎉 Enterprise workspace provisioned! Redirecting to dashboard...', 'success'); setTimeout(() => window.location.href='dashboard.html', 1000);">
+        <div class="grid grid-2" style="margin-bottom: 16px;">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="Dr. Evelyn Vance" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Work Email</label>
+            <input type="email" class="form-control" placeholder="e.vance@company.com" required />
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 16px;">
+          <label class="form-label">Company / Brand Organization</label>
+          <input type="text" class="form-control" placeholder="Apex Pet Nutrition Solutions" required />
+        </div>
+
+        <div class="form-group" style="margin-bottom: 16px;">
+          <label class="form-label">Primary Enterprise Role</label>
+          <select class="form-control">
+            <option>Chief Veterinary Nutritionist</option>
+            <option>VP of Procurement & Co-Packing</option>
+            <option>Sponsorship & BD Director</option>
+            <option>Formulation Research Scientist</option>
+            <option>Regulatory & AAFCO Auditor</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label class="form-label">Create Password</label>
+          <input type="password" class="form-control" placeholder="Min. 12 characters" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 14px;">
+          Provision Workspace & Launch Hub ➔
+        </button>
+
+        <div style="text-align: center; font-size: 0.84rem; color: var(--text-secondary);">
+          Already have an account? <a href="login.html" style="color: var(--brand-primary); font-weight: 600;">Sign in with SSO</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div class="toast-container"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>

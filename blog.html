@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Nutrition Research & Intelligence Journal | NutriPaws</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <span>NutriPaws <span class="logo-badge">ENTERPRISE</span></span>
+      </a>
+
+      <button class="site-menu-toggle" type="button" data-site-menu-toggle>
+        ☰
+      </button>
+
+      <nav class="nav-links" id="site-menu">
+        <a href="index.html">Platform</a>
+        <a href="services.html">Solutions</a>
+        <a href="dashboard.html#matchmaking">Matchmaking</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">Scientific Board</a>
+        <a class="active" href="blog.html">Research Journal</a>
+        <a href="contact.html">Enterprise RFP</a>
+        <div class="nav-actions">
+          <button class="icon-btn" data-theme-toggle title="Dark/Light Mode">🌙</button>
+          <a class="btn btn-outline" href="login.html">Enterprise SSO</a>
+          <a class="btn btn-primary" href="dashboard.html">Launch Hub ➔</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" style="padding: 70px 0 50px;">
+    <div class="container text-center" style="text-align: center; max-width: 800px; margin: 0 auto;">
+      <span class="badge badge-emerald" style="margin-bottom: 12px;">Peer-Reviewed Scientific Whitepapers & Market Insights</span>
+      <h1 class="hero-title" style="margin: 12px 0 16px;">
+        Pet Food Nutrition Intelligence Journal
+      </h1>
+      <p class="hero-description" style="margin: 0 auto 28px;">
+        Explore clinical trial results, AAFCO/FEDIAF regulatory updates, novel insect protein bioavailability, and pet food sponsorship trends.
+      </p>
+    </div>
+  </section>
+
+  <!-- Articles Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3" style="gap: 32px;">
+        <article class="card">
+          <div class="badge badge-emerald" style="margin-bottom: 12px;">Clinical Nutrition</div>
+          <h3>Black Soldier Fly Larvae Meal in Canine Hypoallergenic Diets</h3>
+          <p style="margin: 12px 0 20px;">A 12-week double-blind randomized trial demonstrating 94.8% apparent crude protein digestibility and significant reduction in pruritus scores.</p>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px;">By Dr. Evelyn Vance, PhD • Oct 2026</div>
+          <a class="btn btn-secondary btn-sm" href="blog-detail.html">Read Full Paper ➔</a>
+        </article>
+
+        <article class="card">
+          <div class="badge badge-blue" style="margin-bottom: 12px;">Regulatory Code</div>
+          <h3>2026 AAFCO & FEDIAF Harmonization Analysis</h3>
+          <p style="margin: 12px 0 20px;">Key updates regarding minimum EPA/DHA thresholds, maximum ash contents in feline dry diets, and copper storage hepatopathy safeguards.</p>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px;">By Dr. Alistair Chen, DVM • Sep 2026</div>
+          <a class="btn btn-secondary btn-sm" href="blog-detail.html">Read Full Paper ➔</a>
+        </article>
+
+        <article class="card">
+          <div class="badge badge-purple" style="margin-bottom: 12px;">Supply Chain & M&A</div>
+          <h3>B2B Co-Packing Capacity Sourcing in North America & EU</h3>
+          <p style="margin: 12px 0 20px;">Why premium pet food brands are shifting from spot market manufacturing to long-term multi-seat SLAs with guaranteed extrusion windows.</p>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px;">By Marcus Sterling • Sep 2026</div>
+          <a class="btn btn-secondary btn-sm" href="blog-detail.html">Read Full Paper ➔</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); padding: 48px 0 24px;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.85rem; color: var(--text-secondary);">
+      <div>© 2026 NutriPaws Enterprise Hub. All rights reserved.</div>
+      <div style="display: flex; gap: 20px;">
+        <a href="index.html">Home</a>
+        <a href="services.html">Solutions</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>
