@@ -330,7 +330,7 @@ function switchDashboardTab(tabId) {
     const titles = {
       'overview': { title: 'Executive Overview', desc: 'B2B Pet Nutrition Intelligence & Deal Pipeline' },
       'matchmaking': { title: 'Sponsorship & Client Matchmaking', desc: 'Connect with verified pet food brands, ingredient innovators & co-packers' },
-      'formulation': { title: 'Nutritional Formulation & Lab Lab', desc: 'AAFCO / FEDIAF compliant formulation engine & batch simulator' },
+      'formulation': { title: 'Nutritional Formulation & Lab', desc: 'AAFCO / FEDIAF compliant formulation engine & batch simulator' },
       'contracts': { title: 'Contract Templates & Digital Execution', desc: 'Enterprise IP licensing, SLAs and cryptographic digital signatures' },
       'team-seats': { title: 'Team Seats & Role-Based Access (RBAC)', desc: 'Enterprise quota management, permissions matrix & audit logs' }
     };
@@ -429,17 +429,19 @@ function renderMatchPartners(partners) {
 
   container.innerHTML = partners.map(p => `
     <div class="match-card">
-      <div class="match-score-badge">${p.matchScore}% Match</div>
       <div class="match-card-header">
-        <div class="match-avatar">${p.icon}</div>
-        <div>
-          <div class="match-company">${p.name}</div>
-          <div class="match-meta">${p.type} • 📍 ${p.location}</div>
+        <div class="match-header-left">
+          <div class="match-avatar">${p.icon}</div>
+          <div style="min-width: 0; flex: 1;">
+            <div class="match-company">${p.name}</div>
+            <div class="match-meta">${p.type} • 📍 ${p.location}</div>
+          </div>
         </div>
+        <div class="match-score-badge">${p.matchScore}% Match</div>
       </div>
       <div>
         <div style="font-size: 0.88rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px;">Key Specialty:</div>
-        <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 12px;">${p.specialty}</p>
+        <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 12px; word-break: break-word;">${p.specialty}</p>
         <div class="match-tags">
           <span class="tag">🐾 ${p.species}</span>
           <span class="tag">⚖️ ${p.aafcoTier}</span>
@@ -447,8 +449,8 @@ function renderMatchPartners(partners) {
           <span class="tag">💰 Budget: ${p.budgetTier}</span>
         </div>
       </div>
-      <div style="display: flex; gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--border-subtle);">
-        <button class="btn btn-primary btn-sm" style="flex: 1;" onclick="openProposalModal('${p.id}')">
+      <div style="display: flex; gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--border-subtle); flex-wrap: wrap;">
+        <button class="btn btn-primary btn-sm" style="flex: 1; min-width: 120px;" onclick="openProposalModal('${p.id}')">
           🚀 Send Match RFP
         </button>
         <button class="btn btn-secondary btn-sm" onclick="viewPartnerDossier('${p.id}')">
@@ -1038,3 +1040,22 @@ function renderRevenueChart() {
 window.addEventListener('resize', () => {
   initCharts();
 });
+
+// Enterprise Sign Out Handler
+window.signOut = function() {
+  showToast('Signing out of NutriPaws Enterprise Hub...', 'info');
+  setTimeout(() => {
+    window.location.href = 'login.html';
+  }, 700);
+};
+
+// Social Authentication Handler
+window.socialAuth = function(provider) {
+  showToast(`Connecting to ${provider} Enterprise SSO...`, 'info');
+  setTimeout(() => {
+    showToast(`Authenticated via ${provider}! Redirecting to Hub...`, 'success');
+    setTimeout(() => {
+      window.location.href = 'dashboard.html';
+    }, 700);
+  }, 600);
+};

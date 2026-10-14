@@ -29,10 +29,10 @@
       <nav class="nav-links" id="site-menu">
         <a href="index.html">Platform</a>
         <a href="services.html">Solutions</a>
-        <a href="dashboard.html#matchmaking">Matchmaking</a>
         <a class="active" href="pricing.html">Pricing</a>
         <a href="about.html">Scientific Board</a>
         <a href="contact.html">Enterprise RFP</a>
+        <a href="dashboard.html">Dashboard</a>
         <div class="nav-actions">
           <button class="icon-btn" data-theme-toggle title="Dark/Light Mode">🌙</button>
           <a class="btn btn-outline" href="login.html">Enterprise SSO</a>
@@ -58,7 +58,7 @@
   <!-- Interactive Seat & Add-on Calculator -->
   <section class="section" style="padding: 40px 0 60px;">
     <div class="container">
-      <div class="card" style="max-width: 900px; margin: 0 auto 60px; padding: 36px; background: var(--bg-card); border-color: var(--border-medium);">
+      <div class="card pricing-calc-card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 14px;">
           <div>
             <h3 style="font-size: 1.3rem;">🧮 Interactive Enterprise Seat & Quota Calculator</h3>
@@ -98,40 +98,40 @@
             <div style="font-size: 0.82rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 700;">Estimated Enterprise Subscription</div>
             <div id="calcTotalPrice" class="font-mono" style="font-size: 2.5rem; font-weight: 800; color: var(--brand-emerald); margin: 10px 0;">$3,200<span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/month</span></div>
             <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 18px;">Billed annually • Includes 24/7 Veterinary Scientific Support</div>
-            <a class="btn btn-primary" style="width: 100%;" href="contact.html">Request Enterprise Contract Quote ➔</a>
+            <a class="btn btn-primary calc-quote-btn" style="width: 100%;" href="contact.html">Request Enterprise Contract Quote ➔</a>
           </div>
         </div>
       </div>
 
       <!-- Tier Cards -->
-      <div class="grid grid-3">
+      <div class="grid grid-3 pricing-grid">
         <!-- Tier 1: Lab Innovator -->
-        <div class="card">
-          <div class="badge badge-blue" style="margin-bottom: 12px;">R&D & Formulation</div>
+        <div class="card pricing-card">
+          <div class="badge badge-blue" style="margin-bottom: 12px; align-self: flex-start;">R&D & Formulation</div>
           <h3>Lab Innovator</h3>
           <p>For independent pet nutrition labs and emerging biotech ingredient suppliers.</p>
           <div style="font-size: 2.2rem; font-weight: 800; margin: 20px 0 10px; font-family: 'JetBrains Mono', monospace;">
             $1,250<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">/mo</span>
           </div>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 28px;">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 28px; flex-grow: 1;">
             <li>✓ Up to <strong>10 Team Seats</strong> included</li>
             <li>✓ AAFCO & FEDIAF Batch Simulator</li>
             <li>✓ 5 Active Formulation IP Licenses</li>
             <li>✓ Standard Matchmaking Directory</li>
             <li>✓ Email & Lab Ticket Support</li>
           </ul>
-          <a class="btn btn-secondary" style="width: 100%;" href="dashboard.html">Start 14-Day Pilot</a>
+          <a class="btn btn-secondary pricing-action-btn" style="width: 100%; margin-top: auto;" href="dashboard.html">Start 14-Day Pilot</a>
         </div>
 
         <!-- Tier 2: Enterprise Scale (Recommended) -->
-        <div class="card" style="border-color: var(--brand-emerald); background: linear-gradient(180deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.05) 100%);">
-          <div class="badge badge-emerald" style="margin-bottom: 12px;">★ MOST POPULAR</div>
+        <div class="card pricing-card" style="border-color: var(--brand-emerald); background: linear-gradient(180deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.05) 100%);">
+          <div class="badge badge-emerald" style="margin-bottom: 12px; align-self: flex-start;">★ MOST POPULAR</div>
           <h3>Enterprise Scale</h3>
           <p>For established pet food manufacturers, multi-brand portfolios, and OEM extruders.</p>
           <div style="font-size: 2.2rem; font-weight: 800; margin: 20px 0 10px; font-family: 'JetBrains Mono', monospace; color: var(--brand-emerald);">
             $3,450<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">/mo</span>
           </div>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 28px;">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 28px; flex-grow: 1;">
             <li>✓ Up to <strong>30 Team Seats</strong> included</li>
             <li>✓ Unlimited AAFCO / FEDIAF / NRC Engines</li>
             <li>✓ Priority Matchmaking & Sponsor RFP Dispatch</li>
@@ -139,25 +139,25 @@
             <li>✓ Full RBAC & Department Permission Control</li>
             <li>✓ Dedicated Veterinary Account Director</li>
           </ul>
-          <a class="btn btn-primary" style="width: 100%;" href="dashboard.html">Deploy Enterprise Plan</a>
+          <a class="btn btn-primary pricing-action-btn" style="width: 100%; margin-top: auto;" href="dashboard.html">Deploy Enterprise Plan</a>
         </div>
 
         <!-- Tier 3: Global Conglomerate -->
-        <div class="card">
-          <div class="badge badge-purple" style="margin-bottom: 12px;">Global Operations</div>
+        <div class="card pricing-card">
+          <div class="badge badge-purple" style="margin-bottom: 12px; align-self: flex-start;">Global Operations</div>
           <h3>Global Conglomerate</h3>
           <p>For multinational pet care corporations requiring custom co-packing integrations.</p>
           <div style="font-size: 2.2rem; font-weight: 800; margin: 20px 0 10px; font-family: 'JetBrains Mono', monospace;">
             Custom<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">/enterprise</span>
           </div>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 28px;">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 28px; flex-grow: 1;">
             <li>✓ <strong>Unlimited Team Seats</strong> & Custom SSO</li>
             <li>✓ Dedicated Private Cloud Instance</li>
             <li>✓ Custom ERP & MES Factory Extrusion Integration</li>
             <li>✓ Bespoke Legal SLA & Regulatory Governance</li>
             <li>✓ 99.99% SLA Uptime Guarantee</li>
           </ul>
-          <a class="btn btn-secondary" style="width: 100%;" href="contact.html">Contact Corporate Sales</a>
+          <a class="btn btn-secondary pricing-action-btn" style="width: 100%; margin-top: auto;" href="contact.html">Contact Corporate Sales</a>
         </div>
       </div>
     </div>

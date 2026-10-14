@@ -29,10 +29,10 @@
       <nav class="nav-links" id="site-menu">
         <a href="index.html">Platform</a>
         <a href="services.html">Solutions</a>
-        <a href="dashboard.html#matchmaking">Matchmaking</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">Scientific Board</a>
         <a class="active" href="contact.html">Enterprise RFP</a>
+        <a href="dashboard.html">Dashboard</a>
         <div class="nav-actions">
           <button class="icon-btn" data-theme-toggle title="Dark/Light Mode">🌙</button>
           <a class="btn btn-outline" href="login.html">Enterprise SSO</a>
@@ -58,7 +58,7 @@
   <!-- Contact Form Section -->
   <section class="section" style="padding-top: 20px;">
     <div class="container">
-      <div class="card" style="max-width: 800px; margin: 0 auto; padding: 36px; border-color: var(--border-medium);">
+      <div class="card rfp-card">
         <form id="contactForm" onsubmit="event.preventDefault(); showToast('✅ Enterprise RFP received! An Account Director will review your formulation parameters within 4 hours.', 'success'); this.reset();">
           <div class="grid grid-2" style="margin-bottom: 18px;">
             <div class="form-group">
@@ -113,13 +113,13 @@
           </div>
 
           <div style="margin-bottom: 24px;">
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; cursor: pointer;">
-              <input type="checkbox" checked style="accent-color: var(--brand-emerald); width: 18px; height: 18px;" />
+            <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; cursor: pointer; line-height: 1.4;">
+              <input type="checkbox" checked style="accent-color: var(--brand-emerald); width: 18px; height: 18px; margin-top: 2px;" />
               <span>Request Mutual Two-Way NDA execution prior to formula data exchange.</span>
             </label>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+          <button type="submit" class="btn btn-primary btn-lg rfp-submit-btn" style="width: 100%;">
             🚀 Submit Enterprise RFP & Initiate Scientific Matchmaking
           </button>
         </form>

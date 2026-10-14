@@ -103,7 +103,7 @@
             <div class="user-role">Chief Nutritionist</div>
           </div>
         </div>
-        <div>
+        <div style="margin-bottom: 12px;">
           <label style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-bottom: 4px;">SWITCH PERSPECTIVE:</label>
           <select id="roleSwitcher" class="role-switcher-select">
             <option value="Chief Veterinary Nutritionist">Chief Veterinary Nutritionist</option>
@@ -112,6 +112,12 @@
             <option value="Regulatory & AAFCO Auditor">Regulatory & AAFCO Auditor</option>
           </select>
         </div>
+        <button class="btn btn-danger btn-sm" onclick="signOut()" style="width: 100%; justify-content: center; gap: 8px;">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px;">
+            <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+          </svg>
+          Sign Out
+        </button>
       </div>
     </aside>
 
@@ -119,8 +125,8 @@
     <main class="app-main">
       <!-- Topbar Header -->
       <header class="app-topbar">
-        <div style="display: flex; align-items: center; gap: 16px;">
-          <button class="site-menu-toggle mobile-menu-toggle" type="button">☰</button>
+        <div class="topbar-left">
+          <button class="site-menu-toggle mobile-menu-toggle" type="button" aria-label="Toggle menu">☰</button>
           <div class="topbar-title-area">
             <h1>Executive Overview</h1>
             <p>B2B Pet Nutrition Intelligence & Deal Pipeline</p>
@@ -128,13 +134,16 @@
         </div>
 
         <div class="topbar-actions">
-          <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.25); padding: 6px 12px; border-radius: var(--radius-full); font-size: 0.8rem; color: var(--brand-emerald); font-weight: 600; display: flex; align-items: center; gap: 6px;">
+          <div class="topbar-engine-badge">
             <span class="pulse-dot"></span> AAFCO/FEDIAF 2026 Engine Live
           </div>
           <button class="icon-btn" data-theme-toggle title="Toggle Dark/Light Mode">🌙</button>
           <a class="btn btn-primary btn-sm" href="#matchmaking" onclick="switchDashboardTab('matchmaking')">
             + New Match RFP
           </a>
+          <button class="btn btn-outline btn-sm topbar-signout-btn" onclick="signOut()" title="Sign Out of Enterprise Hub" style="color: var(--brand-rose); border-color: rgba(244, 63, 94, 0.3);">
+            Sign Out
+          </button>
         </div>
       </header>
 
@@ -267,16 +276,16 @@
 
           <!-- Matchmaking Filter Bar -->
           <div class="filter-bar">
-            <div class="filter-group">
-              <input type="text" id="matchSearch" class="input-search" placeholder="Search partner name, ingredient specialty, city..." />
-              <select id="matchTypeFilter" class="select-custom">
+            <div class="filter-group" style="width: 100%;">
+              <input type="text" id="matchSearch" class="input-search" placeholder="Search partner name, ingredient specialty, city..." style="flex: 1 1 200px; min-width: 0;" />
+              <select id="matchTypeFilter" class="select-custom" style="flex: 1 1 180px; min-width: 0;">
                 <option value="all">All Enterprise Partner Types</option>
                 <option value="Biotech">Biotech & Ingredient Suppliers</option>
                 <option value="OEM">OEM Co-Packers & Extruders</option>
                 <option value="Clinical">Clinical Trial CROs</option>
                 <option value="Brand">Global Brand Sponsors</option>
               </select>
-              <select id="matchSpeciesFilter" class="select-custom">
+              <select id="matchSpeciesFilter" class="select-custom" style="flex: 1 1 180px; min-width: 0;">
                 <option value="all">All Species (Canine / Feline / Exotic)</option>
                 <option value="Canine">Canine Specialists</option>
                 <option value="Feline">Feline Specialists</option>
@@ -480,7 +489,7 @@
               <h2 style="font-size: 1.6rem; font-weight: 800;">Enterprise Contract Vault & Digital Studio</h2>
               <p style="color: var(--text-secondary); font-size: 0.92rem;">Select, customize, and cryptographically seal specialized B2B pet food IP licensing and co-packing agreements.</p>
             </div>
-            <div style="display: flex; gap: 10px;">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
               <button class="btn btn-outline btn-sm" id="printContractBtn">🖨️ Print / PDF</button>
               <button class="btn btn-secondary btn-sm" id="downloadContractBtn">📥 Download PDF/A</button>
             </div>
@@ -568,7 +577,7 @@
 
           <!-- Seat Allocation Quota Bar -->
           <div class="seat-quota-bar">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
               <div>
                 <strong id="seatCountLabel" style="font-size: 1.1rem;">24 / 30 Seats Active</strong>
                 <span style="color: var(--text-muted); font-size: 0.84rem; margin-left: 8px;">(Enterprise Tier Multi-Seat License)</span>
